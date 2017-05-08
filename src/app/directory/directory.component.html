@@ -1,0 +1,39 @@
+<p>
+  directory works!
+</p>
+
+<p *ngIf="check" [ngClass]="style">Hello world!!!</p>
+ 
+<p>{{name}}</p>
+
+<hr>
+
+<form id="filter">
+	<label>search:</label>
+	<input type="text" [(ngModel)]="term" [ngModelOptions]="{standalone: true}" >
+</form>
+
+<h3 [ngClass]="{'font-weight':true}">all the Names:</h3>
+<ul>
+	<li *ngFor="let student of students | filter:term"> 
+		<div>
+			<span [ngClass]="{'white':true}" [ngStyle]="{'background-color':student.FC}">{{student.FC}} color</span>
+			<h4>{{student.name}}</h4>
+		</div>
+	</li>
+</ul>
+
+<button (click)="logIt()">Hello!!!!</button>
+
+<form>
+	<input type="text" [(ngModel)]="name" name="name">
+	<input type="text" [(ngModel)]="FC" name="FC">
+	<button (click)="fbPostData(name,FC)">Add</button>
+</form>
+
+<style>
+	.green{color: green ;}
+	.yellow{color: yellow;}
+	.white{color: white;}
+	.font-weight{font-weight: bold;}
+</style>

@@ -1,0 +1,15 @@
+<header>
+	<h1>{{title}}</h1>
+	<nav>
+		<ul>
+			<li><a routerLink="/">Home</a></li>
+			<li><a routerLink="/directory">Directory</a></li>
+		</ul>
+	</nav>
+</header>
+
+<section id="container">
+	<!--<app-home [student]="student" (onYell)="yell($event)">Hey guys!</app-home>-->
+	<router-outlet></router-outlet>
+</section>
+
