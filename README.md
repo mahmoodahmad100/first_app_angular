@@ -1,2 +1,2 @@
-# first_app_angular
+# first app using angular
 this is the first app I did using angular it's for testing 
